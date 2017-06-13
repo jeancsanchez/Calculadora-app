@@ -18,8 +18,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnResult;
     private Button btnMult;
     private TextView textResult;
+    private Button btnClear;
 
-    private int result;
     private boolean isSum = false;
     private boolean isSub = false;
     private boolean isMult = false;
@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnSub = (Button) findViewById(R.id.button_sub);
         btnMult = (Button) findViewById(R.id.button_mult);
         btnResult = (Button) findViewById(R.id.button_result);
+        btnClear = (Button) findViewById(R.id.button_clear);
 
         // Coloca o evento de clique para cada botão
         textResult.setOnClickListener(this);
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnMult.setOnClickListener(this);
         btnSub.setOnClickListener(this);
         btnResult.setOnClickListener(this);
+        btnClear.setOnClickListener(this);
     }
 
     @Override
@@ -72,6 +74,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.button_four:
                 textResult.setText(currentText + "4");
+                break;
+
+            case R.id.button_clear:
+                clear();
                 break;
 
             case R.id.button_result:

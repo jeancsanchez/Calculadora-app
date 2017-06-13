@@ -15,6 +15,7 @@
             android:id="@+id/text_view_result"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:textSize="36sp" />
     </TableRow>
 
@@ -84,5 +85,18 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="=" />
+    </TableRow>
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/button_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Limpar"/>
     </TableRow>
 </TableLayout>
